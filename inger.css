@@ -14,29 +14,14 @@ label, kontakt{
     
 }
 
-#content{
-    background-color: red;
-    
+
+
+.container-fluid{
+    background-color: purple;
 }
 
-.container{
-  
+.navbar-default .navbar-nav>li>a {
+color: #FFF;
 }
 
-#footer{
-   background-color: red;
-}
-/*
-.navbar navbar-default{
-    float: left;
-}
 
-ul, li, nav navbar-nav{
-    float: left;
-    list-style-type: none;
-    margin: 10px;
-}*/
-
-.navbar-form navbar-left{
-    
-}
