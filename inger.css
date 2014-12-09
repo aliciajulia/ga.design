@@ -25,3 +25,29 @@ color: #FFF;
 }
 
 
+.boxar{
+    border: solid thin #000;
+    margin-top: 50px;
+    /*margin: 1px;*/
+    /*width: 380px;*/
+    /*margin: 0 auto;*/
+    /*position: absolute;*/
+}
+
+.btn-carousel{
+    position: absolute;
+    left: 750px; 
+    top: 400px;
+}
+
+.kontakt{
+    width: 500px;
+    margin: 50px;
+}
+
+.row.box{
+    position: absolute;
+    left: 1200px;;
+    top: 150px;
+    width: 300px;
+}
