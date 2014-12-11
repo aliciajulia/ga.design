@@ -12,22 +12,40 @@ label, kontakt{
     background-color: violet;
     /*float:*/ 
     
+    
 }
 
 
 
 .container-fluid{
     background-color: purple;
+    border-radius: 5px;
 }
 
 .navbar-default .navbar-nav>li>a {
 color: #FFF;
+
+/*    -ms-transform: rotate(30deg);  IE 9 
+    -webkit-transform: rotate(30deg);  Chrome, Safari, Opera 
+    transform: rotate(90deg);
+    
+    height: 100px;
+    left: 350px;*/
+
 }
+
+
+.navbar-default .navbar-nav>li>a:hover {
+background-color: white;
+color: black;
+}
+
+
 
 
 .boxar{
     border: solid thin #000;
-    margin-top: 50px;
+    margin-top: 20px;
     /*margin: 1px;*/
     /*width: 380px;*/
     /*margin: 0 auto;*/
@@ -50,4 +68,13 @@ color: #FFF;
     left: 1200px;;
     top: 150px;
     width: 300px;
+}
+
+.row.fot{
+    height: 50px;
+    background-color: purple;
+    /*width: 100%;*/
+    /*margin: 20px;*/
+    margin-top: 20px;
+    border-radius: 5px;
 }
