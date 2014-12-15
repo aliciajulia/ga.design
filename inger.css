@@ -15,7 +15,10 @@ label, kontakt{
     
 }
 
-
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 .container-fluid{
     background-color: purple;
@@ -32,6 +35,11 @@ color: #FFF;
     height: 100px;
     left: 350px;*/
 
+}
+
+.nav {
+ padding-left: 0; 
+ float: right;
 }
 
 
@@ -65,9 +73,15 @@ color: black;
 
 .row.box{
     position: absolute;
-    left: 1200px;;
+    left: 1200px;
     top: 150px;
     width: 300px;
+}
+/*.list-group{
+    background-color: purple;
+}*/
+.list-group-item active {
+    background-color: purple;
 }
 
 .row.fot{
