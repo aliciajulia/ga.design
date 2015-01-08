@@ -66,20 +66,29 @@ color: black;
     top: 400px;
 }
 
-.kontakt{
+/*.kontakt{
     width: 500px;
     margin: 50px;
-}
+}*/
 
 .row.box{
-    position: absolute;
+/*    position: absolute;
     left: 1200px;
     top: 150px;
-    width: 300px;
+    width: 300px;*/
+
+
+
 }
 /*.list-group{
     background-color: purple;
 }*/
+
+/*behandlingar*/
+
+.text{
+    margin-top: 70px;
+}
 .list-group-item active {
     background-color: purple;
 }
@@ -91,4 +100,11 @@ color: black;
     /*margin: 20px;*/
     margin-top: 20px;
     border-radius: 5px;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+z-index: 2;
+color: #fff;
+background-color: purple;
+border-color: black;
 }
