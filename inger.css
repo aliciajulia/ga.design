@@ -48,6 +48,24 @@ background-color: white;
 color: black;
 }
 
+ul.tjanst  li {
+   list-style-type: none; 
+   margin: 10px;
+   
+}
+
+.btn-primary {
+color: #fff;
+background-color: purple;
+border-color: black;
+}
+
+btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+color: #fff;
+background-color: lawngreen;
+border-color: lawngreen;
+}
+
 
 
 
