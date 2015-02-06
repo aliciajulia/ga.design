@@ -16,8 +16,8 @@ label, kontakt{
 }
 
 .container{
-    padding-left: 15px;
-    padding-right: 15px;
+/*    padding-left: 15px;
+    padding-right: 15px;*/
 }
 
 .container-fluid{
@@ -60,10 +60,14 @@ background-color: purple;
 border-color: black;
 }
 
+.btn-primary:hover{
+    background-color: #9966ff;
+}
+
 btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
 color: #fff;
-background-color: lawngreen;
-border-color: lawngreen;
+background-color: #9966ff;
+border-color: black;
 }
 
 
@@ -114,10 +118,14 @@ border-color: lawngreen;
 .row.fot{
     height: 50px;
     background-color: purple;
-    /*width: 100%;*/
-    /*margin: 20px;*/
+  
     margin-top: 20px;
     border-radius: 5px;
+}
+
+.row {
+ margin-right: -15px; 
+ margin-left: -15px; 
 }
 
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
