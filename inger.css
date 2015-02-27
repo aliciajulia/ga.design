@@ -115,12 +115,12 @@ border-color: black;
     background-color: purple;
 }
 
-.row.fot{
+footer{
     height: 50px;
     background-color: purple;
-  
     margin-top: 20px;
     border-radius: 5px;
+    width: 100%;
 }
 
 .row {
@@ -134,3 +134,24 @@ color: #fff;
 background-color: purple;
 border-color: black;
 }
+
+td.fc-day:hover {
+box-shadow: 0px 0px 10px 10px purple;
+
+-webkit-box-shadow: 0 0 1px 3px purple inset;
+-moz-box-shadow: 0 0 1px 3px purple inset;
+box-shadow: 0 0 1px 3px purple inset;
+
+}
+
+body {
+		/*margin: 40px 10px;*/
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
