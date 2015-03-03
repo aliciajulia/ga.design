@@ -157,7 +157,7 @@ background-color: purple;
 border-color: black;
 }
 
-<<<<<<< HEAD
+
 td.fc-day:hover {
 box-shadow: 0px 0px 10px 10px purple;
 
@@ -178,7 +178,7 @@ body {
 		max-width: 900px;
 		margin: 0 auto;
 	}
-=======
+
 .container {
  padding-right: 0px; 
  padding-left: 0px; 
@@ -209,4 +209,13 @@ background-color: purple;
 margin-top: 0px;
 border-radius: 5px;
 }
->>>>>>> origin/master
+
+/*.col-xs-6 col-md-3.text-nav{
+    padding-top: 10px;
+}*/
+
+.thumbnail{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
