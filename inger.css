@@ -3,14 +3,11 @@ body{
     overflow: scroll;
 }
 
-body, kontakt{
-    /*margin:10px;*/
-    /*padding: 15px;*/
-}
+/*body, kontakt{
+   
+}*/
 
 label, kontakt{
-    /*padding: 10px;*/
-    /*margin: 10px;*/
 }
 
 #navbar{
@@ -49,7 +46,7 @@ label, kontakt{
 .navbar-default .navbar-nav>li>a {
     color: #FFF;
 
-    /*    -ms-transform: rotate(30deg);  IE 9 
+/*        -ms-transform: rotate(30deg);  IE 9 
         -webkit-transform: rotate(30deg);  Chrome, Safari, Opera 
         transform: rotate(90deg);
         
@@ -109,10 +106,9 @@ btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, 
     top: 400px;
 }
 
-/*.kontakt{
-    width: 500px;
-    margin: 50px;
-}*/
+.kontakt{
+/*    padding-left: 20px; */
+}
 
 .row.box{
     /*    position: absolute;
@@ -135,6 +131,7 @@ btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, 
 .list-group-item active {
     background-color: #5A396C;
 }
+
 
 .col-xs-4 col-sm-3 col-md-12 boxar row fot{
     height: 50px;
