@@ -118,6 +118,26 @@ padding: 20px;
 
 }
 
+.boxar.row.box1 #manniska, h4{
+    margin-top: 90px;
+    float: right;
+    font-family: 'Lobster', cursive;
+    margin-right: 20px;
+    color: black;
+        
+}
+
+.modal-title, h4{
+    /*color: red;*/
+    font-family: 'Lobster', cursive;
+    float: left;
+    font-size: 20px;
+    /*padding-bottom: 20px;*/
+    /*margin-bottom: 10px;*/
+}
+
+
+
 
 /*.list-group{
     background-color: purple;
@@ -131,15 +151,6 @@ padding: 20px;
 }
 .list-group-item active {
     background-color: #5A396C;
-}
-
-
-.col-xs-4 col-sm-3 col-md-12 boxar row fot{
-    height: 50px;
-/*    background-color: #E2D3E5;*/
-    margin-top: 20px;
-    width: 100%;
-    
 }
 
 .btn-lg, .btn-group-lg>.btn {
