@@ -269,6 +269,14 @@ header{
     border-bottom-right-radius:5px;
 }
 
+p, #namnGivning{
+    color: white;
+}
+
+p, #mailaFraga{
+    color: black;
+}
+
 /*.col-xs-6 col-md-3.text-nav{
     padding-top: 10px;
 }*/
