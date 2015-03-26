@@ -133,7 +133,7 @@ padding: 20px;
     float: left;
     font-size: 20px;
     /*padding-bottom: 20px;*/
-    /*margin-bottom: 10px;*/
+/*    margin-bottom: 10px;*/
 }
 
 .list-group-item.active .list-group-item-heading, .list-group-item.active:hover .list-group-item-heading, .list-group-item.active:focus .list-group-item-heading, .list-group-item.active .list-group-item-heading>small, .list-group-item.active:hover .list-group-item-heading>small, .list-group-item.active:focus .list-group-item-heading>small, .list-group-item.active .list-group-item-heading>.small, .list-group-item.active:hover .list-group-item-heading>.small, .list-group-item.active:focus .list-group-item-heading>.small{
@@ -141,7 +141,10 @@ padding: 20px;
    font-family: 'Lobster', cursive;
    font-size: 30px;
    
+   
+   
 }
+
 
 .list-group-item-text {
 margin-bottom: 0;
@@ -157,16 +160,26 @@ line-height: 1.3;
    font-family: 'Lobster', cursive;
    padding: 20px;
    margin: 0 auto;
-   margin-left: 50%;
+   margin-left: 25.2%;
    
+}
+
+#pOmMig, p {
+    margin-left: 27%;
+    padding: 0px;
+    margin-bottom: 35px;
+    margin-right: 5px;
+    
 }
 
 #bokaTid, h1{
     /*color: red;*/ 
    font-family: 'Lobster', cursive;
-   padding: 20px;
+   padding-bottom: 15px;
+   padding-left:7px; 
+   padding-top: 25px;
    margin: 0 auto;
-   /*margin-left: 50%;*/
+   
 }
 
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus{
@@ -259,6 +272,7 @@ body {
 header{
     /*height: 100px;*/
     background-color: #E2D3E5;
+    
 }
 
 .row.fot {
@@ -271,11 +285,21 @@ header{
 
 p, #namnGivning{
     color: white;
+    padding-top: 15px;
+    
+    
+}
+
+p, #namnOss {
+    color:white;
+    margin-left: 2%;
+    
 }
 
 p, #mailaFraga{
     color: black;
 }
+
 
 /*.col-xs-6 col-md-3.text-nav{
     padding-top: 10px;
