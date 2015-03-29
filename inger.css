@@ -296,17 +296,16 @@ header{
     
 }
 .behandlingar{
-   background-color: purple;
+   background-color: white;
    float: left;
     /*width: 1000px;*/
 }
-#h1Beha{
+.h1Beha{
     font-family: 'Lobster', cursive;
     font-size: 30px;
-    background-color: red;
     margin-left: 1.5%;
     margin-top: 1%;
-    padding-bottom: 0.5%;
+    padding-bottom: 0.7%;
     width: 60%;
     float: left;
    
@@ -315,7 +314,6 @@ header{
 .h2Beha{
     font-family: 'Lobster', cursive;
     font-size: 20px;
-    background-color: yellow;
     margin-left: 1.5%;
     width: 60%;
     float: left;
@@ -323,7 +321,7 @@ header{
 }
 
 .h3Beha {
-    background-color: blue;
+   
     margin-left: 1.5%;
     margin-bottom: 2%;
     width: 60%;
