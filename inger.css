@@ -72,7 +72,7 @@ ul.tjanst  li {
 
 }
 
-.btn-primary {
+.btn-primary, btn-manad{
     color: #fff;
     background-color: #5A396C;
     
@@ -177,10 +177,26 @@ line-height: 1.3;
 #pOmMig, p {
     margin-left: 27%;
     padding: 0px;
-    margin-bottom: 35px;
     margin-right: 5px;
     font-family: arial;
     
+}
+
+
+.adress{
+    margin-left: 2%;
+    padding: 0px;
+    margin-bottom: 35px;
+    margin-right: 5px;
+    font-family: arial;
+    font-weight: bold;
+    
+     
+}
+
+.adressKont{
+    margin-left: 2%;
+    font-weight: bold;
 }
 
 #bokaTid, h1{

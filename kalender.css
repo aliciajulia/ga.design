@@ -1,4 +1,12 @@
 
+#bokningManadRubrik{
+    /*margin-left: 24%;*/
+    margin-right: 83%;
+    font-family: 'Lobster', cursive;
+    font-size: 50px; 
+    margin-top: 3%;
+}
+
 .bookableDay {
     color: green;
     width: 90px;
@@ -8,35 +16,47 @@
     font-size: 35px;    
     /*outline: black dashed;*/
     padding: 8px 10px;
+    font-family: 'Lobster';
 }
 .bookableTime {
-    cursor:pointer
+    cursor:pointer;
+    /*font-family: 'Lobster';*/
+    font-size: 25px; 
 }
 
 .disabled {
     color: gray;
     width: 90px;
-    height: 70px;
+    height: 60px;
     /*outline: black dashed;*/
     padding: 8px 10px;
     font-size: 35px;  
 }
 .regular {
     width: 90px;
-    height: 70px;
+    height: 60px;
     /*outline: black dashed;*/
     padding: 8px 10px;
-    font-size: 35px;  
+    font-size: 35px;
+    font-family: 'Lobster';
 }
 .weekday {
     text-align: center;
     width: 90px;
     height: 20px;
     font-size: 22px;
+    font-family: 'Lobster', cursive;
 }
 #dag { 
     display:none;
+    
 }
+
+.valj{
+    margin-right: 89%;
+    font-family: 'Lobster', cursive;
+}
+
 
 #bokningsform {
     display: none;
@@ -51,19 +71,16 @@ ul {
     display: flex;
 }
 
-ul li {
-    padding: 2px;
-}
 
 .kalender {
     text-align: center;
     margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     margin-left: 20%;
 }
 .forManad {
-    /*margin-left: -60%;*/
-    /*margin-right: 20%;*/
+    margin-left: -40%;
+    margin-right: 20%;
     padding: 1px;
     width: 200px;
 
@@ -75,4 +92,18 @@ ul li {
     width: 200px;
     margin: 0;
 
+}
+.boka {
+     padding: 1px;
+     width: 150px;
+     margin-top: 2%;
+}
+
+.kundInfo{
+    margin-right: 3%;
+}
+
+#kundTelefon{
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
 }

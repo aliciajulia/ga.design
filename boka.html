@@ -12,6 +12,7 @@ and open the template in the editor.
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="inger.css" rel="stylesheet"> 
         <link rel="stylesheet" href="kalender.css">
@@ -71,8 +72,9 @@ and open the template in the editor.
                     </div><!-- /.container-fluid -->
                 </nav>
                 <!--HÄR SKA DU LÄGGA IN KALENDERN-->
-                <div class="col-xs-12 col-sm-12 col-md-12 kalender">
 
+                <div class="col-xs-12 col-sm-12 col-md-12 kalender">
+                    <h2 id="bokningManadRubrik"></h2>
                     <div class="days">
                         <ul>
                             <li class='weekday'>Måndag</li>
@@ -85,16 +87,17 @@ and open the template in the editor.
                         </ul>
                     </div>
                     <div id="kalender"></div>
-                    <button class="btnPrev btn btn-primary btn-lg forManad">Föregående Månad</button>    
-                    <button class="btnNext btn btn-primary btn-lg nastaManad">Nästa Månad</button>            
+                    <button class="btnPrev btn btn-lg forManad btn-manad">Föregående Månad</button>    
+                    <button class="btnNext btn btn-lg nastaManad btn-manad">Nästa Månad</button>
+                    <div class="valj">Välj tid</div>
                     <div id="dag"></div>
                     <form id="bokningsform" action="bokaTid.php" method="GET">
                         <p>Du kommer att boka en tid den <span id="selectedDate"></span> kl <span id="selectedTime"></span> hos oss.</p>
                         <input type="hidden" name="starttid" id="starttid">
-                        Namn <input type="text" name="kundNamn" value="" required id="kundNamn"><br>
-                        Telefon <input type="text" name="kundTelefon" value="" required id="kundTelefon"><br>
-                        Email <input type="text" name="kundMail" value="" required id="kundMail"><br>
-                        <button>boka</button>
+                        Namn <input class="kundInfo" type="text" name="kundNamn" value="" required id="kundNamn"><br>
+                        Telefon <input class="kundInfo" type="text" name="kundTelefon" value="" required id="kundTelefon"><br>
+                        Email <input class="kundInfo" type="text" name="kundMail" value="" required id="kundMail"><br>
+                        <button class="btn btn-primary btn-lg boka">Boka</button>
                     </form>
                 </div>
                 <script src="jquery-1.11.2.min.js"></script>

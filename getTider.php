@@ -6,7 +6,7 @@ $login = 'root';
 $password = '';
 $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
 $dbh = new PDO($dsn, $login, $password, $options);
-var_dump($_GET["starttid"]);
+//var_dum, p($_GET["starttid"]);
 $starttid = $_GET["starttid"] . " 00:00:00";
 $sluttid = $_GET["starttid"] . " 23:59:59";
 //$firstDay = date("Y-m-01", $time);
@@ -19,7 +19,7 @@ $sluttid = $_GET["starttid"] . " 23:59:59";
 
 
 $sql = "SELECT * FROM tider WHERE starttid BETWEEN '$starttid' AND '$sluttid' ORDER BY starttid ASC";
-echo $sql;
+//echo $sql;
 $stmt = $dbh->prepare($sql);
 $stmt->execute();
 $bokningar = $stmt->fetchAll(PDO::FETCH_ASSOC);

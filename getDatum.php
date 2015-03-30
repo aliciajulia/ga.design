@@ -69,8 +69,67 @@ switch ($month) {
         $date[0]["nextMonth"] = $year . "-" . $tmp_month . "-01";
         $tmp_month = $month - 1;
         $date[0]["prevMonth"] = $year . "-" . $tmp_month . "-01";
+        $date[0]["currentMonth"] = "Januari";
+        break;
+    case 02:
+        $date[0]["prevMonth"] = $year . "-01-01";
+        $date[0]["nextMonth"] = $year . "-03-01";
+        $date[0]["currentMonth"] = "Februari";
+        break;
+    case 03:
+        $date[0]["prevMonth"] = $year . "-02-01";
+        $date[0]["nextMonth"] = $year . "-04-01";
+        $date[0]["currentMonth"] = "Mars";
+        break;
+    case 04:
+        $date[0]["prevMonth"] = $year . "-03-01";
+        $date[0]["nextMonth"] = $year . "-05-01";
+        $date[0]["currentMonth"] = "April";
+        break;
+    case 05:
+        $date[0]["prevMonth"] = $year . "-04-01";
+        $date[0]["nextMonth"] = $year . "-06-01";
+        $date[0]["currentMonth"] = "Maj";
+        break;
+    case 06:
+        $date[0]["prevMonth"] = $year . "-05-01";
+        $date[0]["nextMonth"] = $year . "-07-01";
+        $date[0]["currentMonth"] = "Juni";
+        break;
+    case 07:
+        $date[0]["prevMonth"] = $year . "-06-01";
+        $date[0]["nextMonth"] = $year . "-08-01";
+        $date[0]["currentMonth"] = "Juli";
+        break;
+    case 08:
+        $date[0]["prevMonth"] = $year . "-07-01";
+        $date[0]["nextMonth"] = $year . "-09-01";
+        $date[0]["currentMonth"] = "Augusti";
+        break;
+    case 09:
+        $date[0]["prevMonth"] = $year . "-08-01";
+        $date[0]["nextMonth"] = $year . "-10-01";
+        $date[0]["currentMonth"] = "September";
+        break;
+    case 10:
+        $date[0]["prevMonth"] = $year . "-09-01";
+        $date[0]["nextMonth"] = $year . "-11-01";
+        $date[0]["currentMonth"] = "Oktober";
+        break;
+    case 11:
+        $date[0]["prevMonth"] = $year . "-10-01";
+        $date[0]["nextMonth"] = $year . "-12-01";
+        $date[0]["currentMonth"] = "November";
+        break;
+    case 12:
+        $tmp_year = $year + 1;
+        $date[0]["prevMonth"] = $tmp_year . "-01-01";
+        $date[0]["nextMonth"] = $year . "-11-01";
+        $date[0]["currentMonth"] = "December";
         break;
 }
+
+
 $date[0]["month"] = $month;
 //var_dump($date);
 //echo "<br>";echo "<br>";echo "<br>";
