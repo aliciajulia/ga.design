@@ -1,0 +1,56 @@
+
+.bookableDay {
+    color: green;
+    width: 90px;
+    height: 20px;
+    font-weight: bold;
+    cursor:pointer
+}
+
+.disabled {
+    color: gray;
+    width: 90px;
+    height: 20px;
+}
+.regular {
+    width: 90px;
+    height: 20px;
+}
+.weekday {
+    text-align: center;
+    width: 90px;
+    height: 20px;
+}
+#dag { 
+    display:none;
+}
+
+#bokningsform {
+    display: none;
+
+}
+span {
+    font-weight: bold;
+}
+/*omstylning till kalender*/
+ul {
+    list-style-type:none;
+    display: flex;
+}
+
+ul li {
+    padding: 2px;
+}
+
+.kalender {
+   text-align: center;
+   margin-top: 2%;
+   margin-bottom: 2%;
+   margin-left: 20%;
+}
+.forManad {
+    margin-left: 20%;
+}
+.nastaManad {
+    margin-right: 20%;
+}

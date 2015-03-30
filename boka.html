@@ -9,77 +9,106 @@ and open the template in the editor.
         <title>Boka nu</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="kalender.css">
         <link href="inger.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <link href='fullcalendar-2.2.6/fullcalendar.css' rel='stylesheet' />
-<link href='fullca<linklendar-2.2.6/fullcalendar.print.css' rel='stylesheet' media='print' />
-<script src='fullcalendar-2.2.6/lib/moment.min.js'></script>
-<script src='fullcalendar-2.2.6/lib/jquery.min.js'></script>
-<script src='fullcalendar-2.2.6/fullcalendar.min.js'></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <!--
+                <link href='fullcalendar-2.2.6/fullcalendar.css' rel='stylesheet' />
+        <link href='fullca<linklendar-2.2.6/fullcalendar.print.css' rel='stylesheet' media='print' />
+        <script src='fullcalendar-2.2.6/lib/moment.min.js'></script>
+        <script src='fullcalendar-2.2.6/lib/jquery.min.js'></script>
+        <script src='fullcalendar-2.2.6/fullcalendar.min.js'></script>
+        -->
 
-
-</head>
-<body>
-	<div class="container">
+    </head>
+    <body>
+        <div class="container">
             <header><img class="img-responsive" src="img/loggaStor.png" alt="#"></header>
-        <div class="row">
-             <nav class="navbar navbar-default" role="navigation">
+            <div class="row">
+                <nav class="navbar navbar-default" role="navigation">
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                  </button>
-                                  <a class="navbar-brand" href="#"></a>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"></a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<img src="img/logo.png" alt="#" id="loga">
+                            <img src="img/logo.png" alt="#" id="loga">
 
-<!--                            <form class="navbar-form navbar-left" role="search">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="SÖK PÅ SIDAN">
-                                </div>
-                                <button type="submit" class="btn btn-default">SÖK</button>
-                            </form>-->
-                            
+                            <!--                            <form class="navbar-form navbar-left" role="search">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="SÖK PÅ SIDAN">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-default">SÖK</button>
+                                                        </form>-->
+
                             <ul class="nav navbar-nav">
 
 
 
 
-        <li><a href="index.html">Hem</a></li>
-        <li><a href="om.html">Om</a></li>
-        <li><a href="behandlingar.html">Behandlingar</a></li>
-        <li><a href="boka.html">Boka nu</a></li>
-        <li><a href="tjanster.html">Tjänster</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li> 
+                                <li><a href="index.html">Hem</a></li>
+                                <li><a href="om.html">Om</a></li>
+                                <li><a href="behandlingar.html">Behandlingar</a></li>
+                                <li><a href="boka.html">Boka nu</a></li>
+                                <li><a href="tjanster.html">Tjänster</a></li>
+                                <li><a href="kontakt.html">Kontakt</a></li> 
                             </ul>
 
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
+                <!--HÄR SKA DU LÄGGA IN KALENDERN-->
+                <div class="col-xs-12 col-sm-12 col-md-12 kalender">
             
-            <script src="kalender.js"></script>
+            <div class="days">
+                <ul>
+                    <li class='weekday'>Måndag</li>
+                    <li class='weekday'>Tisdag</li>
+                    <li class='weekday'>Onsdag</li>
+                    <li class='weekday'>Torsdag</li>
+                    <li class='weekday'>Fredag</li>
+                    <li class='weekday'>Lördag</li>
+                    <li class='weekday'>Söndag</li>
+                </ul>
+            </div>
+            <div id="kalender"></div>
+            <button class="btnPrev btn btn-primary btn-lg forManad">Föregående Månad</button>
+            <button class="btnNext btn btn-primary btn-lg nastaManad">Nästa Månad</button>            
+            <div id="dag"></div>
+            <form id="bokningsform" action="bokaTid.php" method="GET">
+                <p>Du kommer att boka en tid den <span id="selectedDate"></span> kl <span id="selectedTime"></span> hos oss.</p>
+                <input type="hidden" name="starttid" id="starttid">
+                Namn <input type="text" name="kundNamn" value="" required id="kundNamn"><br>
+                Telefon <input type="text" name="kundTelefon" value="" required id="kundTelefon"><br>
+                Email <input type="text" name="kundMail" value="" required id="kundMail"><br>
+                <button>boka</button>
+            </form>
+        </div>
+        <script src="jquery-1.11.2.min.js"></script>
+        <script src="kalender.js"></script>
 
-        
-<div id='calendar'></div>
-    
-         <div class="col-md-12 boxar row fot">
-            <p id="namnGivning">Rebecka.ekstrom@hotmail.se
-            @Rebecka Ekström, Alicia Broberg, Lovisa Schenning</p>
+
+                <div id='calendar'></div>
+
+                <div class="col-md-12 boxar row fot">
+                    <p id="namnGivning">Rebecka.ekstrom@hotmail.se
+                        @Rebecka Ekström, Alicia Broberg, Lovisa Schenning</p>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
-       </body> 
-    
+    </body> 
+
 </html>

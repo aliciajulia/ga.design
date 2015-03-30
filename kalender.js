@@ -1,66 +1,106 @@
-$(document).ready(function() {
+//$(this).siblings("input").val();
+$(document).ready(main);
 
-		$('#calendar').fullCalendar({
-			defaultDate: '2015-01-01',
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2015-01-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2015-03-01',
-					end: '2014-11-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2015-11-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2015-11-16T16:00:00'
-				},
-				{
-					title: 'Conference',
-					start: '2015-11-11',
-					end: '2015-11-13'
-				},
-				{
-					title: 'Meeting',
-					start: '2015-11-12T10:30:00',
-					end: '2015-11-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2015-11-12T12:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2015-11-12T14:30:00'
-				},
-				{
-					title: 'Happy Hour',
-					start: '2015-11-12T17:30:00'
-				},
-				{
-					title: 'Dinner',
-					start: '2015-11-12T20:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2015-11-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2015-11-28'
-				}
-			]
-		});
-		
-	});
+function main() {
 
+    var nextMonth = "";
+    var prevMonth = "";
+    initListeners();
+    getDatum();
+}
+
+function initListeners() {
+    $('.btnNext').click(function() {
+        console.log('nextMonth klickad');
+        $('#kalender').children().remove();
+        console.log(nextMonth);
+        getDatum(nextMonth);
+    });//click button
+}
+
+function addDateListener() {
+    $('.bookableDay').click(function() {
+        $('.days').hide();
+        console.log("dag klickad");
+        getTider($(this));
+    });//click bookable
+}
+
+function addTimeListener() {
+    $('.bookableTime').click(function() {
+        $('.days').hide();
+        console.log("tid klickad");
+        $('#dag').slideToggle();
+        $('#bokningsform').slideToggle();
+        $('#starttid').val($(this).attr("data-date"));
+        $('#selectedDate').text($('#starttid').val().substr(0, 10));
+        $('#selectedTime').text($('#starttid').val().substr(11, 5));
+    });//click bookable
+}
+
+function getTider(e) {
+    var starttid = $(e).text();
+    $('#kalender').slideToggle();
+
+    $.getJSON("getTider.php", {starttid: starttid})
+            .done(function(data) {
+                console.log(data);
+                var tmp_html = "";
+                $.each(data, function(key, value) {
+                    console.log(key + ", " + value.starttid);
+                    tmp_html = tmp_html + "<li class='bookableTime' data-date='" + value.starttid + "'>" + value.starttid + "</li>";
+                });//.each
+                tmp_html = "<ul>" + tmp_html + "</ul>";
+                $('#dag').append(tmp_html);
+                $('#dag').slideToggle();
+                addTimeListener();
+            });//done + getJSON
+}//getDatum
+
+function getDatum(date) {
+    $.getJSON("getDatum.php", {date: date})
+            .done(function(data) {
+//                console.log(data);
+                var tmp_html = "";
+                $.each(data, function(key, value) {
+                    tmp_html = tmp_html + "<li class='" + value.class + "'>" + value.starttid + "</li>";
+                    //kolla slut av vecka och skriv till veckan och resetta
+                    if (key % 7 == 6) {
+                        tmp_html = "<ul>" + tmp_html + "</ul>";
+                        $('#kalender').append(tmp_html);
+                        tmp_html = "";
+                    }
+                });//.each
+                tmp_html = "<ul>" + tmp_html + "</ul>";
+                $('#kalender').append(tmp_html);
+                addDateListener();
+                nextMonth = data[0]["nextMonth"];
+                prevMonth = data[0]["prevMonth"];
+            });//done + getJSON
+}//getDatum
+
+
+//function addBookingListeners() {
+//    $("form").submit(function (event) {
+//        console.log("submit fångad, förbereder getJSON");
+//        event.preventDefault();
+//
+//
+////        console.log(selectedDate);
+//
+//
+//
+//        var starttid = $('#starttid').val();
+//        var kundNamn = $('#kundNamn').val();
+//        var kundTelefon = $('#kundTelefon').val();
+//        var kundMail = $('#kundMail').val();
+//
+//
+//        $.getJSON("bokaTid.php", {starttid: selectedDate, kundNamn: kundNamn, kundTelefon: kundTelefon, kundMail: kundMail})
+//                .done(function (data) {
+//                    console.log(data);
+//                });//done + getJSON
+//
+//    });//submit
+//
+//}
