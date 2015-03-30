@@ -72,7 +72,6 @@ switch ($month) {
         break;
 }
 $date[0]["month"] = $month;
-
+//var_dump($date);
 //echo "<br>";echo "<br>";echo "<br>";
 echo json_encode($date);
-

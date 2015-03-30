@@ -2,24 +2,37 @@
 .bookableDay {
     color: green;
     width: 90px;
-    height: 20px;
+    height: 70px;
     font-weight: bold;
+    cursor:pointer;
+    font-size: 35px;    
+    /*outline: black dashed;*/
+    padding: 8px 10px;
+}
+.bookableTime {
     cursor:pointer
 }
 
 .disabled {
     color: gray;
     width: 90px;
-    height: 20px;
+    height: 70px;
+    /*outline: black dashed;*/
+    padding: 8px 10px;
+    font-size: 35px;  
 }
 .regular {
     width: 90px;
-    height: 20px;
+    height: 70px;
+    /*outline: black dashed;*/
+    padding: 8px 10px;
+    font-size: 35px;  
 }
 .weekday {
     text-align: center;
     width: 90px;
     height: 20px;
+    font-size: 22px;
 }
 #dag { 
     display:none;
@@ -43,14 +56,23 @@ ul li {
 }
 
 .kalender {
-   text-align: center;
-   margin-top: 2%;
-   margin-bottom: 2%;
-   margin-left: 20%;
-}
-.forManad {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
     margin-left: 20%;
 }
+.forManad {
+    /*margin-left: -60%;*/
+    /*margin-right: 20%;*/
+    padding: 1px;
+    width: 200px;
+
+}
 .nastaManad {
-    margin-right: 20%;
+    /*margin-left: 25%;*/
+    /*    margin-right: -20%;*/
+    padding: 1px;
+    width: 200px;
+    margin: 0;
+
 }

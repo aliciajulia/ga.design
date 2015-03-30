@@ -10,7 +10,7 @@ function main() {
 }
 
 function initListeners() {
-    $('.btnNext').click(function() {
+    $('.btnNext').click(function () {
         console.log('nextMonth klickad');
         $('#kalender').children().remove();
         console.log(nextMonth);
@@ -19,7 +19,7 @@ function initListeners() {
 }
 
 function addDateListener() {
-    $('.bookableDay').click(function() {
+    $('.bookableDay').click(function () {
         $('.days').hide();
         console.log("dag klickad");
         getTider($(this));
@@ -27,7 +27,7 @@ function addDateListener() {
 }
 
 function addTimeListener() {
-    $('.bookableTime').click(function() {
+    $('.bookableTime').click(function () {
         $('.days').hide();
         console.log("tid klickad");
         $('#dag').slideToggle();
@@ -39,14 +39,17 @@ function addTimeListener() {
 }
 
 function getTider(e) {
+//console.log("hej");
     var starttid = $(e).text();
+    console.log(starttid);
     $('#kalender').slideToggle();
 
     $.getJSON("getTider.php", {starttid: starttid})
-            .done(function(data) {
+            .done(function (data) {
                 console.log(data);
                 var tmp_html = "";
-                $.each(data, function(key, value) {
+                console.log(value.starttid);
+                $.each(data, function (key, value) {
                     console.log(key + ", " + value.starttid);
                     tmp_html = tmp_html + "<li class='bookableTime' data-date='" + value.starttid + "'>" + value.starttid + "</li>";
                 });//.each
@@ -59,11 +62,14 @@ function getTider(e) {
 
 function getDatum(date) {
     $.getJSON("getDatum.php", {date: date})
-            .done(function(data) {
+            .done(function (data) {
 //                console.log(data);
                 var tmp_html = "";
-                $.each(data, function(key, value) {
-                    tmp_html = tmp_html + "<li class='" + value.class + "'>" + value.starttid + "</li>";
+//                var tmp_html2;
+                $.each(data, function (key, value) {
+                    var datum = value.starttid.substr(8, 2);
+                    tmp_html = tmp_html + "<li class='" + value.class + "'>" + datum + "</li>";
+//                    tmp_html2 = tmp_html + "<li class='" + value.class + "'>" + value.starttid + "</li>";
                     //kolla slut av vecka och skriv till veckan och resetta
                     if (key % 7 == 6) {
                         tmp_html = "<ul>" + tmp_html + "</ul>";
