@@ -18,11 +18,7 @@
     padding: 8px 10px;
     font-family: 'Lobster';
 }
-.bookableTime {
-    cursor:pointer;
-    /*font-family: 'Lobster';*/
-    font-size: 25px; 
-}
+
 
 .disabled {
     color: gray;
@@ -106,4 +102,14 @@ ul {
 #kundTelefon{
     margin-top: 1.5%;
     margin-bottom: 1.5%;
+}
+.bookableTime {
+    cursor:pointer;
+    /*font-family: 'Lobster';*/
+    font-size: 25px; 
+    /*display: none;*/
+    /*color: red;*/
+    /*flex-direction: column;*/
+    /*-webkit-flex-direction: column;*/
+    display: block;
 }
